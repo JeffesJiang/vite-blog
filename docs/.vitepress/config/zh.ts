@@ -12,6 +12,7 @@ export const zh = defineConfig({
 
     sidebar: {
       '/front-end/': [{base: '/front-end/', items: sidebarFrontend()}],
+      '/back-end/': [{base: '/back-end/', items: sidebarBackend()}],
       '/gis/': [{base: '/gis/', items: sidebarGis()}
       ]
     },
@@ -26,7 +27,7 @@ export const zh = defineConfig({
     },
 
     outline: {
-      level: [1, 6],
+      level: 'deep',
       label: '页面导航'
     }
   }
@@ -36,6 +37,7 @@ function nav(): DefaultTheme.NavItem[] {
   return [
     {text: '指南', link: '/guide/'},
     {text: '前端', link: '/front-end/introduction/', activeMatch: '/front-end/'},
+    {text: '后端', link: '/back-end/database/', activeMatch: '/back-end/'},
     {text: '网络', link: '/network/'},
     {text: '算法', link: '/algorithm/'},
     {text: 'GIS', link: '/gis/mapbox', activeMatch: '/gis/'},
@@ -62,6 +64,12 @@ function sidebarFrontend(): DefaultTheme.SidebarItem[] {
     },
     {text: '前端性能', link: 'performance/'},
     {text: '面试', link: 'interview/'}
+  ]
+}
+
+function sidebarBackend(): DefaultTheme.SidebarItem[] {
+  return [
+    {text: '数据库', link: 'database/'}
   ]
 }
 
