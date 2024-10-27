@@ -17,7 +17,7 @@ export const zh = defineConfig({
     },
 
     socialLinks: [
-      {icon: 'github', link: 'https://github.com/JeffesJiang/blog'}
+      {icon: 'github', link: 'https://github.com/JeffesJiang/vite-blog'}
     ],
 
     footer: {
